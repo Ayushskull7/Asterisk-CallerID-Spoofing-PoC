@@ -16,7 +16,7 @@ This custom Asterisk dialplan implements a simple proof-of-concept call spoofing
    If no spoof number provided, no changes to caller ID are made.
 6. Prompts the caller to enter a target extension and reads it into `TARGET` (up to 4 digits, 5 seconds timeout).
 7. If `TARGET` is empty, plays `vm-goodbye` and hangs up.
-8. Plays confirmation prompts (`to-call`, `if-this-is-correct`, `1-yes-2-no`) and reads a single-digit confirmation `CONFIRM`.
+8. Plays confirmation prompts (`if-this-is-correct`, `1-yes-2-no`) and reads a single-digit confirmation `CONFIRM`.
 9. If `CONFIRM` equals `1`, proceeds to `do_call`; otherwise goes to `hangup`.
 10. `do_call` logs a `NoOp` with the target and current `CALLERID(num)`, plays `auth-thankyou`, then dials `PJSIP/${TARGET}` for 30 seconds and hangs up.
 11. `hangup` plays `vm-goodbye` and hangs up.
