@@ -23,3 +23,8 @@ This custom Asterisk dialplan implements a simple proof-of-concept call spoofing
 
 ## Files
 - `extensions_custom.conf` — contains the dialplan shown (context names: `from-internal-custom`, `proof-of-concept-custom`).
+
+## Setup Guide
+These guides were followed to build and configure this proof-of-concept:
+- [How to Build Your Own Caller ID Spoofer – Part 1](https://www.rapid7.com/blog/post/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/)
+- [How to Build Your Own Caller ID Spoofer – Part 2](https://www.rapid7.com/blog/post/2018/07/12/how-to-build-your-own-caller-id-spoofer-part-2/)
