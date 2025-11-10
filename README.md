@@ -11,7 +11,7 @@ This custom Asterisk dialplan implements a simple proof-of-concept call spoofing
 4. Reads the spoof number into the variable `SPOOF` (up to 12 digits, 5 seconds timeout).
 5. If a spoof number was provided:
    - Sets `CALLERID(num)` to `+${SPOOF}`.
-   - Sets `CALLERID(name)` to `AyushSpoofed`.
+   - Sets `CALLERID(name)` to `+${SPOOF}`.
    - Sets `CDR(outbound_cnum)` to `+${SPOOF}`.
    If no spoof number provided, no changes to caller ID are made.
 6. Prompts the caller to enter a target extension and reads it into `TARGET` (up to 4 digits, 5 seconds timeout).
